@@ -9,6 +9,8 @@ import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
 
+const arrMembers = require('../assets/members.json').members;
+
 export default class ScreenHome extends Component {
   static navigationOptions = ({navigation}) => ({
     headerRight: (
@@ -22,7 +24,8 @@ export default class ScreenHome extends Component {
     navigate('Members')
   }
   onHandleWinner = () => {
-    console.warn(`${Math.random()}`);
+    const { navigate } = this.props.navigation;
+    navigate('Winner', {winner: Math.floor(Math.random() * arrMembers.length)})
   }
 
   render() {
