@@ -19,9 +19,9 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    height: 160,
+    height: 180,
     width: window.width,
     marginTop: 60,
   },
